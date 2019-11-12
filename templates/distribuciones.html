@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>Distribuciones</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../css/main.css') }}">
+</head>
+<body style="background-color:powderblue;">
+    
+        <div style="background-color:black">
+                Distribuciones:
+                <a href="/uniforme">Uniforme</a>
+                <a href="/binomial">Binomial</a>
+                <a href="/hiper">Hipergeometrica</a>
+                <a href="/poisson">Poisson</a>
+        </div>
+    
+    
+    <h2>Distribuciones</h2>
+
+
+    <p><a allign=center href="{{ url_for('uniforme') }}" id=uniforme><button class='btn btn-default'>Distribucion Uniforme</button></p>
+    
+    
+    <p><a href="{{ url_for('binomial') }}" id=binomial><button class='btn btn-default'>Distribucion Binomial</button></p>
+    <p><a href="{{ url_for('hiper') }}" id=hiper><button class='btn btn-default'>Distribucion Hipergeometrica</button></p>
+    <p><a href="{{ url_for('poisson') }}" id=poisson><button class='btn btn-default'>Distribucion Poisson</button></p>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<title>Distribucion Binomial</title>
+    <div>
+        Distribuciones:
+        <a href="/uniforme">Uniforme</a>
+        <a href="/binomial">Binomial</a>
+        <a href="/hiper">Hipergeometrica</a>
+        <a href="/poisson">Poisson</a>
+    </div>
+
+<div>
+    
+<h2>Dustribucion Binomial</h2>
+<p><a href="{{ url_for('index') }}">atras</a></p>
+<form action="" method="post" role="form">
+    {{ form.csrf }}
+<div>
+        {{form.p.label() }}{{form.p()}}<br>
+        {{form.x.label() }}{{form.x()}}<br>
+        {{form.n.label() }}{{form.n()}}</div>
+<button type="submit">Calcular</button>
+</form>
+{% if prob %}
+La probabilidad es de {{prob}}%
+{% endif %}

@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<title>Distribucion Uniforme</title>
+    <div style="background-color:black">
+        Distribuciones:
+        <a href="/uniforme">Uniforme</a>
+        <a href="/binomial">Binomial</a>
+        <a href="/hiper">Hipergeometrica</a>
+        <a href="/poisson">Poisson</a>
+    </div>
+<div class="container">
+<h2>Dustribucion uniforme</h2>
+<p><a href="{{ url_for('index') }}">atras</a></p>
+<form action="" method="post" role="form">
+    {{ form.csrf }}
+<div>
+      {{form.resul.label() }}{{form.resul()}}</div>
+<button type="submit">Calcular</button>
+</form>
+{% if prob %}
+La probabilidad es de {{prob}}%
+{% endif %}
